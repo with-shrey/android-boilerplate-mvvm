@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package app.flipshop.android.viewmodel;
+package app.flipshop.android.util;
 
-import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 
 import java.util.Map;
 

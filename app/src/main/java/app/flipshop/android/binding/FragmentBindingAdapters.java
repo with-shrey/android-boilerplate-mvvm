@@ -16,13 +16,11 @@
 
 package app.flipshop.android.binding;
 
-import android.databinding.BindingAdapter;
-import android.support.v4.app.Fragment;
+import androidx.databinding.BindingAdapter;
+
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
-
-import javax.inject.Inject;
 
 /**
  * Binding adapters that work with a fragment instance.

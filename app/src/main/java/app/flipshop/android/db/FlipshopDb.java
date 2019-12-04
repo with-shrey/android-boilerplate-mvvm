@@ -19,8 +19,8 @@ package app.flipshop.android.db;
 
 import app.flipshop.android.model.User;
 
-import android.arch.persistence.room.Database;
-import android.arch.persistence.room.RoomDatabase;
+import androidx.room.Database;
+import androidx.room.RoomDatabase;
 
 /**
  * Main database description.

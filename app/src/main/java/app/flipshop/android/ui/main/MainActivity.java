@@ -17,10 +17,11 @@
 package app.flipshop.android.ui.main;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 
 import androidx.navigation.NavController;
@@ -31,18 +32,16 @@ import androidx.navigation.ui.NavigationUI;
 import javax.inject.Inject;
 
 import app.flipshop.android.R;
+import app.flipshop.android.util.InjectedAppCompatActivity;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.support.HasSupportFragmentInjector;
 
-public class MainActivity extends AppCompatActivity implements HasSupportFragmentInjector {
-    @Inject
-    DispatchingAndroidInjector<Fragment> dispatchingAndroidInjector;
+public class MainActivity extends InjectedAppCompatActivity {
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity);
         NavController navController = Navigation.findNavController(this,R.id.nav_host_fragment);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -54,8 +53,10 @@ public class MainActivity extends AppCompatActivity implements HasSupportFragmen
         return Navigation.findNavController(this, R.id.nav_host_fragment).navigateUp();
     }
 
+
     @Override
-    public DispatchingAndroidInjector<Fragment> supportFragmentInjector() {
-        return dispatchingAndroidInjector;
+    public int getLayoutId() {
+        return R.layout.main_activity;
     }
+
 }

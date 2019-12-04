@@ -1,10 +1,10 @@
 package app.flipshop.android.repository;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.LiveDataReactiveStreams;
-import android.support.annotation.MainThread;
-import android.support.annotation.NonNull;
-import android.support.annotation.WorkerThread;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.LiveDataReactiveStreams;
+import androidx.annotation.MainThread;
+import androidx.annotation.NonNull;
+import androidx.annotation.WorkerThread;
 
 import app.flipshop.android.model.Resource;
 import io.reactivex.BackpressureStrategy;

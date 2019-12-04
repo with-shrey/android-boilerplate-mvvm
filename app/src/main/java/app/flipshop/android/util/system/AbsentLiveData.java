@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package app.flipshop.android.util;
+package app.flipshop.android.util.system;
 
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
 
 /**
  * A LiveData class that has {@code null} value.

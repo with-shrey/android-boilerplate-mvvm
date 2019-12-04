@@ -16,8 +16,8 @@
 
 package app.flipshop.android.model;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import static app.flipshop.android.model.Status.ERROR;
 import static app.flipshop.android.model.Status.INVALID;

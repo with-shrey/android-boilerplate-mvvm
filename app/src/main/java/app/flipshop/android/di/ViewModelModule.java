@@ -1,10 +1,10 @@
 package app.flipshop.android.di;
 
-import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 
 import app.flipshop.android.ui.main.auth.LoginViewModel;
-import app.flipshop.android.viewmodel.FlipshopViewModelFactory;
+import app.flipshop.android.util.FlipshopViewModelFactory;
 
 import dagger.Binds;
 import dagger.Module;

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package app.flipshop.android.util;
+package app.flipshop.android.util.system;
 
 
 import app.flipshop.android.api.ApiResponse;
 
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
 
 import java.lang.reflect.Type;
 import java.util.concurrent.atomic.AtomicBoolean;

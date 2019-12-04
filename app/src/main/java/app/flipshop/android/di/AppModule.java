@@ -17,16 +17,16 @@
 package app.flipshop.android.di;
 
 import android.app.Application;
-import android.arch.persistence.room.Room;
+
+import androidx.room.Room;
 import android.content.Context;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import app.flipshop.android.api.WebService;
 import app.flipshop.android.db.FlipshopDb;
 import app.flipshop.android.db.UserDao;
-import app.flipshop.android.util.LiveDataCallAdapterFactory;
 
-import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import app.flipshop.android.util.SharedPreferencesUtil;

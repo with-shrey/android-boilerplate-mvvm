@@ -16,7 +16,7 @@
 
 package app.flipshop.android.repository;
 
-import app.flipshop.android.AppExecutors;
+import app.flipshop.android.util.AppExecutors;
 import app.flipshop.android.api.WebService;
 import app.flipshop.android.db.UserDao;
 import app.flipshop.android.model.Resource;
@@ -24,8 +24,8 @@ import app.flipshop.android.model.User;
 import io.reactivex.Flowable;
 import io.reactivex.Observable;
 
-import android.arch.lifecycle.LiveData;
-import android.support.annotation.NonNull;
+import androidx.lifecycle.LiveData;
+import androidx.annotation.NonNull;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;

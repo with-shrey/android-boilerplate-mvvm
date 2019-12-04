@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
-package app.flipshop.android.util;
+package app.flipshop.android.util.system;
 
 import android.os.SystemClock;
-import android.support.v4.util.ArrayMap;
+
+import androidx.collection.ArrayMap;
 
 import java.util.concurrent.TimeUnit;
 

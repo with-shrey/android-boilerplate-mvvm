@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package app.flipshop.android.util;
+package app.flipshop.android.util.system;
 
 public class Objects {
     public static boolean equals(Object o1, Object o2) {
