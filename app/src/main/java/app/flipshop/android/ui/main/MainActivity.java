@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package app.flipshop.android.activities;
+package app.flipshop.android.ui.main;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

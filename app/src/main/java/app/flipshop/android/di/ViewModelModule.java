@@ -3,7 +3,7 @@ package app.flipshop.android.di;
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 
-import app.flipshop.android.ui.auth.LoginViewModel;
+import app.flipshop.android.ui.main.auth.LoginViewModel;
 import app.flipshop.android.viewmodel.FlipshopViewModelFactory;
 
 import dagger.Binds;

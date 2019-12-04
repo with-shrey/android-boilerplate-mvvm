@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-package app.flipshop.android.vo;
+package app.flipshop.android.model;
 
 import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.Index;
 import android.support.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;

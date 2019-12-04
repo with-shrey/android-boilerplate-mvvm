@@ -1,4 +1,4 @@
-package app.flipshop.android.ui.auth;
+package app.flipshop.android.ui.main.auth;
 
 
 import android.os.Bundle;
@@ -37,6 +37,7 @@ public class LoginFragment extends Fragment implements Injectable {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
         super.onViewCreated(view, savedInstanceState);
         mAppExecutors.mainThread().execute(() -> Toast.makeText(getActivity(), "Hello", Toast.LENGTH_SHORT).show());
     }

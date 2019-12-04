@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="app.flipshop.android.ui.auth.LoginFragment"
+        android:name="app.flipshop.android.ui.main.auth.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
 </navigation>

@@ -14,11 +14,21 @@
  * limitations under the License.
  */
 
-package app.flipshop.android.ui.common;
+package app.flipshop.android.ui.main;
 
-/**
- * Generic interface for retry buttons.
- */
-public interface RetryCallback {
-    void retry();
+
+import app.flipshop.android.ui.main.auth.LoginFragment;
+import dagger.Module;
+import dagger.android.ContributesAndroidInjector;
+
+@Module
+public abstract class MainActivityFragmentBuildersModule {
+    @ContributesAndroidInjector
+    abstract LoginFragment contributeLoginFragment();
+//
+//    @ContributesAndroidInjector
+//    abstract UserFragment contributeUserFragment();
+//
+//    @ContributesAndroidInjector
+//    abstract SearchFragment contributeSearchFragment();
 }

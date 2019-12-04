@@ -32,7 +32,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
         AndroidInjectionModule.class,
         AndroidSupportInjectionModule.class,
         AppModule.class,
-        MainActivityModule.class
+        ActivityModule.class
 })
 public interface AppComponent {
     @Component.Builder

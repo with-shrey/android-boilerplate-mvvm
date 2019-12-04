@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package app.flipshop.android.vo;
+package app.flipshop.android.model;
 
 /**
  * Status of a resource that is provided to the UI.

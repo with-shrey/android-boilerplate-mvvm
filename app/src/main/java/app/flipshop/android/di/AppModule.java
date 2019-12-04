@@ -18,6 +18,7 @@ package app.flipshop.android.di;
 
 import android.app.Application;
 import android.arch.persistence.room.Room;
+import android.content.Context;
 import android.support.annotation.NonNull;
 
 import app.flipshop.android.api.WebService;
@@ -25,12 +26,12 @@ import app.flipshop.android.db.FlipshopDb;
 import app.flipshop.android.db.UserDao;
 import app.flipshop.android.util.LiveDataCallAdapterFactory;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import app.flipshop.android.util.SharedPreferencesUtil;
 import dagger.Module;
 import dagger.Provides;
-import okhttp3.OkHttpClient;
-import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -43,8 +44,8 @@ class AppModule {
     @Singleton
     @NonNull
     WebService provideWebService() {
-        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
-        httpClient.addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY));
+//        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+//        httpClient.addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY));
 
         //add retro builder
         Retrofit.Builder retroBuilder = new Retrofit.Builder()
@@ -52,7 +53,7 @@ class AppModule {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create());
 
-        retroBuilder.client(httpClient.build());
+//        retroBuilder.client(httpClient.build());
 
         //create retrofit - only this instance would be used in the entire application
         Retrofit retrofit = retroBuilder.build();
@@ -63,9 +64,22 @@ class AppModule {
         return Room.databaseBuilder(app, FlipshopDb.class,"app.flipshop.android.db").build();
     }
 
+
+    @Provides
+    @Singleton
+    Context provideContext(Application application) {
+        return application;
+    }
+
     @Singleton @Provides
     UserDao provideUserDao(FlipshopDb db) {
         return db.userDao();
+    }
+
+    @Singleton
+    @Provides
+    SharedPreferencesUtil provideSharedPreferencesUtil(Context context) {
+        return new SharedPreferencesUtil(context);
     }
 
 //    @Singleton @Provides

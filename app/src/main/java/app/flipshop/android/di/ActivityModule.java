@@ -16,19 +16,14 @@
 
 package app.flipshop.android.di;
 
+import app.flipshop.android.ui.main.MainActivity;
 
-import app.flipshop.android.ui.auth.LoginFragment;
+import app.flipshop.android.ui.main.MainActivityFragmentBuildersModule;
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 
 @Module
-public abstract class FragmentBuildersModule {
-    @ContributesAndroidInjector
-    abstract LoginFragment contributeLoginFragment();
-//
-//    @ContributesAndroidInjector
-//    abstract UserFragment contributeUserFragment();
-//
-//    @ContributesAndroidInjector
-//    abstract SearchFragment contributeSearchFragment();
+public abstract class ActivityModule {
+    @ContributesAndroidInjector(modules = MainActivityFragmentBuildersModule.class)
+    abstract MainActivity contributeMainActivity();
 }

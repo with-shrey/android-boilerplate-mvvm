@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package app.flipshop.android.vo;
+package app.flipshop.android.model;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import static app.flipshop.android.vo.Status.ERROR;
-import static app.flipshop.android.vo.Status.INVALID;
-import static app.flipshop.android.vo.Status.LOADING;
-import static app.flipshop.android.vo.Status.SUCCESS;
+import static app.flipshop.android.model.Status.ERROR;
+import static app.flipshop.android.model.Status.INVALID;
+import static app.flipshop.android.model.Status.LOADING;
+import static app.flipshop.android.model.Status.SUCCESS;
 
 /**
  * A generic class that holds a value with its loading status.

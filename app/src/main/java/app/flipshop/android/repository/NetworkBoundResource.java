@@ -6,7 +6,7 @@ import android.support.annotation.MainThread;
 import android.support.annotation.NonNull;
 import android.support.annotation.WorkerThread;
 
-import app.flipshop.android.vo.Resource;
+import app.flipshop.android.model.Resource;
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
 import io.reactivex.Observable;
